@@ -1,0 +1,54 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, sans-serif;
+}
+body {
+  margin: 0;
+  background: #0b1020;
+  color: #f5f7ff;
+}
+.container {
+  max-width: 880px;
+  margin: 2rem auto;
+  padding: 0 1rem 2rem;
+}
+.panel {
+  border: 1px solid #2f3a5d;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-top: 1rem;
+  background: #141b34;
+}
+label {
+  display: block;
+  margin: 0.7rem 0;
+}
+input, select, button {
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.55rem;
+  border-radius: 8px;
+  border: 1px solid #3f4d79;
+  background: #0d152c;
+  color: #f5f7ff;
+}
+button.run {
+  background: #3158ff;
+  border-color: #3158ff;
+  font-weight: 700;
+}
+.scenario-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background: #080d1b;
+  border-radius: 8px;
+  padding: 0.8rem;
+}
+.note {
+  color: #b5c0e8;
+}

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decoda Threat Lab</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Decoda Threat Lab (Staging Only)</h1>
+      <p class="note">Safe threat simulation runner for validating monitoring, alerts, incidents, and audit history updates.</p>
+
+      <section class="panel">
+        <label>Decoda Staging API URL
+          <input id="baseUrl" type="text" placeholder="https://api.staging.decoda.ai" />
+        </label>
+        <label>Workspace
+          <input id="workspace" type="text" placeholder="staging-workspace-a" />
+        </label>
+        <label>Target
+          <input id="target" type="text" placeholder="vault-alpha" />
+        </label>
+
+        <label>Scenario
+          <select id="scenario">
+            <option value="unlimited_approval">unlimited_approval</option>
+            <option value="large_native_transfer">large_native_transfer</option>
+            <option value="admin_privilege_abuse">admin_privilege_abuse</option>
+            <option value="flash_loan_like">flash_loan_like</option>
+            <option value="oracle_anomaly">oracle_anomaly</option>
+          </select>
+        </label>
+
+        <div class="scenario-buttons">
+          <button data-scenario="unlimited_approval">unlimited_approval</button>
+          <button data-scenario="large_native_transfer">large_native_transfer</button>
+          <button data-scenario="admin_privilege_abuse">admin_privilege_abuse</button>
+          <button data-scenario="flash_loan_like">flash_loan_like</button>
+          <button data-scenario="oracle_anomaly">oracle_anomaly</button>
+        </div>
+
+        <label>Mode
+          <select id="mode">
+            <option value="synthetic">synthetic</option>
+            <option value="testnet">testnet</option>
+          </select>
+        </label>
+
+        <button id="runBtn" class="run">Run Scenario</button>
+      </section>
+
+      <section class="panel">
+        <h2>Latest Result</h2>
+        <pre id="result">No run yet.</pre>
+      </section>
+
+      <section class="panel">
+        <h2>History</h2>
+        <button id="refreshBtn">Refresh</button>
+        <pre id="history">[]</pre>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
